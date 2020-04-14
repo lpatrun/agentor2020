@@ -1,0 +1,56 @@
+[
+    {
+        "id" : "0",
+        "image": "img/kuca-1.jpg",
+        "name" :  "Prekrasna villa",
+        "location": "Istra",
+        "rooms" : "4 sobe",
+        "size" : "325",
+        "price" : "320 000"
+       },
+    {
+        "id": "1",
+        "image": "img/kuca-2.jpg",
+        "name" :  "Ladanjska villa",
+        "location": "Poreč",
+        "rooms" : "10 soba",
+        "size" : "720",
+        "price" : "650 000"
+    },
+    {
+        "id": "2",
+        "image": "img/kuca-3.jpg",
+        "name" :  "Moderna villa",
+        "location": "Opatija",
+        "rooms" : "4 sobe",
+        "size" : "280",
+        "price" : "300 000"
+    },
+    {
+        "id": "3",
+        "image": "img/kuca-4.jpg",
+        "name" :  "Villa u unutrašnjosti",
+        "location": "Dalmacija",
+        "rooms" : "8 soba",
+        "size" : "990",
+        "price" : "780 000"
+    },
+    {
+        "id": "4",
+        "image": "img/kuca-5.jpg",
+        "name" :  "Brdska villa",
+        "location": "Gorski kotar",
+        "rooms" : "4 sobe",
+        "size" : "450",
+        "price" : "280 000"
+    },
+    {
+        "id": "5",
+        "image": "img/kuca-6.jpg",
+        "name" :  "Moderna kuća",
+        "location": "Istra",
+        "rooms" : "3 sobe",
+        "size" : "250",
+        "price" : "345 000"
+    }    
+]

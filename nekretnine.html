@@ -7,13 +7,11 @@
         
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        
-        <script type="text/javascript" src="js/index.js"></script>
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>AGENTOR | lokacija vaše nove nekretnine</title>
     </head>
-    <body class="container">
+    <body class="nekretnine">
         <div class="sidebar">
             <!-- <button class="nav-btn"></button> -->
 
@@ -27,114 +25,36 @@
                     <li class="sidebar__item"><a href="" class="sidebar__link">PONUDITE</a></li>
                     <li class="sidebar__item"><a href="" class="sidebar__link">O NAMA</a></li>
                     <li class="sidebar__item"><a href="" class="sidebar__link">KONTAKT</a></li>
-                    <li class="sidebar__item"><a href="" class="sidebar__link">KARIJERE</a></li>
                 </ul>
             </nav>
         </div>
 
-        <header class="header">
-            <img src="img/logo.png" alt="Agentor logo" class="header__logo">
-            <h3 class="heading-3">Vaš dom:</h3>
-            <h1 class="heading-1">Potpuna sloboda</h1>
-            <a href="nekretnine.html"><button class="btn header__btn">Pogledajte nekretnine</button></a>
-        </header>
-
-        <div class="agents">
-            <h3 class="heading-3">Najbolji agenti</h3>
-            <div class="agents__list">
-                <img src="img/agent-1.jpg" alt="Agent1" class="agents__img">
-                <div class="agents__details">
-                    <h4 class="heading-4 heading-4--light">Luka Patrun</h4>
-                    <p class="agents__sold">69 PRODANIH NEKRETNINA</p>
-                </div>
-
-                <img src="img/agent-2.jpeg" alt="Agent1" class="agents__img">
-                <div class="agents__details">
-                    <h4 class="heading-4 heading-4--light">Marija Ivić</h4>
-                    <p class="agents__sold">64 PRODANE NEKRETNINE</p>
-                </div>
-
-                <img src="img/agent-3.jpeg" alt="Agent1" class="agents__img">
-                <div class="agents__details">
-                    <h4 class="heading-4 heading-4--light">Eduardo Da Silva</h4>
-                    <p class="agents__sold">48 PRODANIH NEKRETNINA</p>
-                </div>
+        <section class="homes margin-s">
+            <div class="search">
+                <label for="trazim">Tražim:</label>
+                <select id="trazim" class="search__list">
+                    <option value="kuca">Kuću</option>
+                    <option value="stan">Stan</option>
+                    <option value="vikendica">Vikendicu</option>
+                </select>
             </div>
-        </div>
 
-        <section class="features">
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="img/sprite.svg#icon-global"></use>
+            <div class="search">
+                <label for="lokacija">Lokacija:</label>
+                <select id="lokacija" class="search__list">
+                    <option value="kuca">Zagreb</option>
+                    <option value="stan">Split</option>
+                    <option value="vikendica">Dubrovnik</option>
+                </select>
+            </div>
+            
+            <div class="search search__trazilica">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                 </svg>
-                <h4 class="heading-4 heading-4--dark">Najluksuznije kuće</h4>
-                <p class="feature__text">Naši stručnjaci za nekretine su za Vas odabrali
-                    samo najluksuznije kuće koje se trenutno mogu pronaći na tržištu.
-                </p>
+                <p>Traži</p>
             </div>
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="img/sprite.svg#icon-trophy"></use>
-                </svg>
-                <h4 class="heading-4 heading-4--dark">Najbolje nekretnine</h4>
-                <p class="feature__text">
-                    U našoj ponudi ćete pronaći samo
-                    najbolje nekretnine koje se nalaze na tržištu u Hrvatskoj.
-                </p>
-            </div>
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                </svg>
-                <h4 class="heading-4 heading-4--dark">Kuće na top lokacijama</h4>
-                <p class="feature__text">Pomoću velikog broja suradnika, za naše
-                 klijente smo osigurali kuće koje se nalaze samo na najboljim lokacijama.
-                </p>
-            </div>
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="img/sprite.svg#icon-key"></use>
-                </svg>
-                <h4 class="heading-4 heading-4--dark">Do useljenja za 7 dana</h4>
-                <p class="feature__text">Iskoristite naše veliko iskustvo i stručnost
-                    te ćete u novom domu uživati u roku tjedan dana.
-                </p>
-            </div>
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="img/sprite.svg#icon-presentation"></use>
-                </svg>
-                <h4 class="heading-4 heading-4--dark">Vrhunski agenti</h4>
-                <p class="feature__text">u timu imamo vrhunske agente koji su 
-                    prošli nekoliko razina selekcije prije nego su zaslužili Agentor licencu.
-                </p>
-            </div>
-            <div class="feature">
-                <svg class="feature__icon">
-                    <use xlink:href="img/sprite.svg#icon-lock"></use>
-                </svg>
-                <h4 class="heading-4 heading-4--dark">Sigurna kupovina</h4>
-                <p class="feature__text">Da biste bili sigurni u svoju odluku,
-                    bit ćemo Vam na usluzi 24/7 kroz našu podršku za kliente.
-                </p>
-            </div>
-        </section>
-
-        <div class="story__pictures">
-            <img src="img/story-1.jpeg" alt="Ljubavni par" class="story__img--1">
-            <img src="img/story-2.jpeg" alt="Nova kuća" class="story__img--2">
-        </div>
-
-        <div class="story__content">
-            <h3 class="heading-3 mb-s">Zadovoljni klijenti</h3>
-            <h2 class="heading-2 heading-2--dark mb-m">&ldquo;Naša najbolja odluka&rdquo;</h2>
-            <p class="story__text">Uz pomoć stručnih agenata bilo nam je vrlo lako
-                odlučiti se za naš novi dom.
-            </p>
-            <a href="nekretnine.html"><button class="btn">Pronađite svoj dom</button></a>
-        </div>
-
-        <section class="homes">
+            
             <div class="home">
                 <img src="img/kuca-1.jpg" alt="Kuća u Istri" class="home__img">
                 <!-- <svg class="home__like">
@@ -333,7 +253,7 @@
                 <button class="btn home__btn">DETALJNIJE</button>
             </div>
 
-            <button class="btn homes__btn" onclick="window.location.href = 'nekretnine.html'">VIDI SVE NEKRETNINE</button>
+            <button class="btn homes__btn">UČITAJ JOŠ</button>
         </section>
 
         <section class="gallery">
