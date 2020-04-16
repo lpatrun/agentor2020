@@ -9,7 +9,6 @@ let data = [
 { "id":"5","image": "img/kuca-6.jpg", "name":  "Moderna kuća", "location": "Istra", "rooms": "3 sobe", "size": "250", "price": "345 000" }   
 ]
 
-const renderItems = document.querySelector('.homes__btn') as HTMLElement;
 const buttonLoadMore = document.querySelector('.homes__btn') as HTMLElement;
 
 const renderProduct = (data: { productType: any; image: any; name: any; price: any; id: any; location: any; rooms: any; size: any}) => {
@@ -44,7 +43,7 @@ const renderProduct = (data: { productType: any; image: any; name: any; price: a
                 <button class="btn home__btn">DETALJNIJE</button>
             </div>
     `;
-    renderItems.insertAdjacentHTML('beforebegin',markup);
+    buttonLoadMore.insertAdjacentHTML('beforebegin',markup);
 }
 
 let houseStart = 0, houseEnd = 0;

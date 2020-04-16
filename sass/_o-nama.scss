@@ -1,0 +1,53 @@
+.about {
+    grid-column: center-start / center-end;
+    color: $color-primary;
+    text-align: center;
+    margin-top: 4rem;
+        
+    &__img {
+        display: flex;
+        margin: 2rem auto;
+        margin-bottom: 0rem;
+    }
+
+    &__title {
+        font-family: $font-azonix;
+        font-size: 13rem;
+    }
+
+    &__desc {
+        font-size: 4.2rem;
+        text-transform: uppercase;
+        margin-top: -6.5rem;
+    }
+}
+
+.team {
+
+    &__people {
+        grid-column: full-start / col-end 4;
+        background-image: linear-gradient(rgba($color-secondary, .9), rgba($color-secondary, .9)),url(../img/team.jpg);
+        background-size: cover;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding:5rem;
+    }
+
+    &__place{
+        grid-column: col-end 4 / full-end;
+        background-image: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9)),url(../img/ured.jpg);
+        background-size: cover;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding:5rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+}

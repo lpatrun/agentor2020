@@ -1,0 +1,10 @@
+.history {
+    grid-column: center-start / center-end;
+    margin: 5rem 0;
+    text-align: center;
+
+    &__img{
+        width: 100%;
+        margin-top: 5rem;
+    }
+}

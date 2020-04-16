@@ -6,7 +6,6 @@ let data = [
     { "id": "4", "image": "img/kuca-5.jpg", "name": "Brdska villa", "location": "Gorski kotar", "rooms": "4 sobe", "size": "450", "price": "280 000" },
     { "id": "5", "image": "img/kuca-6.jpg", "name": "Moderna kuća", "location": "Istra", "rooms": "3 sobe", "size": "250", "price": "345 000" }
 ];
-const renderItems = document.querySelector('.homes__btn');
 const buttonLoadMore = document.querySelector('.homes__btn');
 const renderProduct = (data) => {
     var markup = `
@@ -40,7 +39,7 @@ const renderProduct = (data) => {
                 <button class="btn home__btn">DETALJNIJE</button>
             </div>
     `;
-    renderItems.insertAdjacentHTML('beforebegin', markup);
+    buttonLoadMore.insertAdjacentHTML('beforebegin', markup);
 };
 let houseStart = 0, houseEnd = 0;
 function renderProducts(data) {

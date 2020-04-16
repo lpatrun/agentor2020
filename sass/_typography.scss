@@ -16,6 +16,13 @@
     font-style: italic;
     line-height: 1;
 
+    &--tall {
+        @extend %heading;
+        font-size: 4rem;
+        font-style: italic;
+        line-height: 1.6;
+    }
+
     &--light { color: $color-grey-light-1;}
     &--dark {color: $color-grey-dark-1;}
 }
@@ -58,3 +65,4 @@
 .mb-m { margin-bottom: 3rem; }
 .mb-l { margin-bottom: 4rem; }
 .mb-xl { margin-bottom: 8rem; }
+.mb-xxl { margin-bottom: 10rem; }

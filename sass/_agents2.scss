@@ -1,0 +1,30 @@
+.agents2 {
+    grid-column: full-start / full-end;
+    background-color: $color-grey-light-1;  
+    
+    h2 {
+        padding: 3rem;
+        text-align: center;
+    }
+
+    &__cols {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 12rem;
+        margin-top: 5rem;
+        margin-bottom: 15rem;
+        padding: 0 15rem;
+    }
+
+    &__agent {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        background-color: #fff;
+    }
+
+    &__img {
+        width: 16rem;
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+}
