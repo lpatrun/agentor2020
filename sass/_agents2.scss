@@ -1,24 +1,32 @@
 .agents2 {
     grid-column: full-start / full-end;
     background-color: $color-grey-light-1;  
-    
-    h2 {
-        padding: 3rem;
+  
+    &__heading {
         text-align: center;
+        padding: 12rem 0;
+
+        @media only screen and (max-width: $bp-m) {
+            padding: 8rem;
+        }
     }
 
     &__cols {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-gap: 12rem;
-        margin-top: 5rem;
-        margin-bottom: 15rem;
+        margin-bottom: 12rem;
         padding: 0 15rem;
+
+        @media only screen and (max-width: $bp-m) {
+            grid-gap: 8rem;
+            margin-bottom: 8rem;
+            padding: 0 5rem;
+        }
     }
 
     &__agent {
         display: grid;
-        grid-template-columns: 2fr 3fr;
         background-color: #fff;
     }
 
@@ -26,5 +34,42 @@
         width: 16rem;
         width: 100%;
         grid-column: 1 / -1;
+    }
+
+    &__name {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+        color: $color-secondary
+    }
+
+    &__title {
+        text-align: center;
+        color: $color-primary;
+        font-size: 1.2em;
+    }
+
+    &__quote {
+        padding: 1em;
+        font-size: 1.7em;
+    }
+
+    &__phone,
+    &__mail {
+        padding: 1em;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+            fill: $color-primary;
+            height: 3rem;
+            width: 3rem;
+            margin-right: 1rem;
+        }
+    }
+    
+    &__mail {
+        margin-bottom: 1rem;
     }
 }

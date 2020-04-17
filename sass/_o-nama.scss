@@ -3,6 +3,12 @@
     color: $color-primary;
     text-align: center;
     margin-top: 4rem;
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width: $bp-m) {
+        margin-top: 12rem;
+        margin-bottom: 12rem;
+    }
         
     &__img {
         display: flex;
@@ -13,12 +19,21 @@
     &__title {
         font-family: $font-azonix;
         font-size: 13rem;
+        
+        @media only screen and (max-width: $bp-m) {
+            font-size: 6rem;
+        }
     }
 
     &__desc {
         font-size: 4.2rem;
         text-transform: uppercase;
         margin-top: -6.5rem;
+
+        @media only screen and (max-width: $bp-m) {
+            font-size: 1.9rem;
+            margin-top: -3rem;
+        }
     }
 }
 
@@ -33,6 +48,10 @@
         align-items: center;
         text-align: center;
         padding:5rem;
+
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__place{
@@ -44,6 +63,10 @@
         align-items: center;
         text-align: center;
         padding:5rem;
+
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__img {

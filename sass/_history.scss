@@ -1,10 +1,21 @@
 .history {
     grid-column: center-start / center-end;
-    margin: 5rem 0;
+    margin: 15rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-m) {
+        grid-column: 1 / -1;
+        margin: 8rem 0;
+    }
 
     &__img{
         width: 100%;
-        margin-top: 5rem;
+        margin-top: 8rem;
+
+        @media only screen and (max-width: $bp-m) {
+            width: 85%;
+            margin: 0 auto; 
+            margin-top: 4rem;
+        }
     }
 }
