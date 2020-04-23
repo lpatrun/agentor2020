@@ -7,27 +7,22 @@
         
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/index.js" defer></script>
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>AGENTOR | lokacija vaše nove nekretnine</title>
     </head>
     <body class="container">
         <div class="sidebar">
-            <!-- <button class="nav-btn"></button> -->
-
             <input type="checkbox" class="sidebar__checkbox" id="navi-toggle">
             <label for="navi-toggle" class="sidebar__button"><span class="sidebar__icon">&nbsp;</span></label>
 
             <nav class="sidebar__nav">
                 <ul class="sidebar__list">
                     <li class="sidebar__item"><a href="index.html" class="sidebar__link">POČETNA</a></li>
-                    <li class="sidebar__item"><a href="nekretnine.html" class="sidebar__link">NEKRETNINE</a></li>
-                    <li class="sidebar__item"><a href="" class="sidebar__link">PONUDITE</a></li>
+                    <li class="sidebar__item"><a href="#homes" class="sidebar__link hide-navi">NEKRETNINE</a></li>
                     <li class="sidebar__item"><a href="o-nama.html" class="sidebar__link">O NAMA</a></li>
-                    <li class="sidebar__item"><a href="" class="sidebar__link">KONTAKT</a></li>
-                    <li class="sidebar__item"><a href="" class="sidebar__link">KARIJERE</a></li>
+                    <li class="sidebar__item"><a href="contact.html" class="sidebar__link">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,7 +31,7 @@
             <img src="img/logo.png" alt="Agentor logo" class="header__logo">
             <h3 class="heading-3">Vaš dom:</h3>
             <h1 class="heading-1">Potpuna sloboda</h1>
-            <a href="nekretnine.html"><button class="btn header__btn">Pogledajte nekretnine</button></a>
+            <a href="#homes"><button class="btn header__btn" id="test">Pogledajte nekretnine</button></a>
         </header>
 
         <div class="agents">
@@ -134,9 +129,9 @@
             <a href="nekretnine.html"><button class="btn">Pronađite svoj dom</button></a>
         </div>
 
-        <section class="homes">
+        <section class="homes" id="homes">
            
-            <div class="home">
+            <!-- <div class="home">
                 <img src="img/kuca-1.jpg" alt="Kuća u Istri" class="home__img">
                 <h5 class="home__name">Prekrasna villa</h5>
                 <div class="home__location">
@@ -313,10 +308,12 @@
                     </svg>
                     <p>345 000€</p>
                 </div>
-                <button class="btn home__btn">DETALJNIJE</button>
+                <button class="btn home__btn">DETALJNIJE</button> -->
+
+                {%HOMES%}
             </div>
 
-            <button class="btn homes__btn" onclick="window.location.href = 'nekretnine.html'">VIDI SVE NEKRETNINE</button>
+          <!--   <button class="btn homes__btn" onclick="window.location.href = 'nekretnine.html'">VIDI SVE NEKRETNINE</button> -->
         </section>
 
         <section class="gallery">
@@ -341,13 +338,12 @@
         <footer class="footer">
             <ul class="nav">
                 <li class="nav__item"><a href="index.html" class="nav__link">POČETNA</a></li>
-                <li class="nav__item"><a href="nekretnine.html" class="nav__link">NEKRETNINE</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">PONUDITE</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">O NAMA</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">KONTAKT</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">KARIJERE</a></li>
+                <li class="nav__item"><a href="#homes" class="nav__link">NEKRETNINE</a></li>
+                <li class="nav__item"><a href="o-nama.html" class="nav__link">O NAMA</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">KONTAKT</a></li>
             </ul>
             <p class="copyright">&copy; From LP to the world</p>
         </footer>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>

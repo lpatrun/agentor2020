@@ -1,0 +1,82 @@
+.single {
+    grid-column: center-start / center-end;
+    margin: 6rem 0 12rem 0;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    background-color: $color-grey-light-1;
+    grid-template-rows: 8rem 6rem 6rem min-content;
+    position: relative;
+
+    &__img {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        width: 100%;
+    }
+
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-decoration: none;
+        background-color: $color-grey-light-1;
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        color: #000;
+
+        &:hover {
+            background-color: $color-grey-light-2;
+        }
+    }
+
+    &__name {
+        grid-column: 2 / -1;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        background-color: $color-secondary;
+    }
+
+    &__location {
+        grid-column: 2 / 3;
+    }
+
+    &__rooms {
+        grid-column: 3 / 4;
+    }
+
+    &__area {
+        grid-column: 2 / 3;
+    }
+
+    &__price {
+        grid-column: 3 / 4;
+    }
+
+    &__description {
+        grid-column: 2 / -1;
+        margin-top: 1rem;
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    &__location,
+    &__rooms,
+    &__area,
+    &__price {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+            padding: 1rem;
+            margin-top: 1rem;
+
+        svg {
+            fill: $color-primary;
+            height: 2rem;
+            width: 2rem;
+            margin-right: 1rem;
+        }
+    }
+}

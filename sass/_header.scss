@@ -5,16 +5,18 @@
     background-size: cover;
     background-position: center;
     padding: 6rem;
-    padding-top: 6rem;
+    padding-bottom: 16rem;
 
     display: grid;
-    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 5rem;
     grid-template-columns: minmax(min-content, max-content);
     grid-row-gap: 1.5rem;
     justify-content:center;
 
     @media only screen and (max-width: $bp-m) {
         grid-column: 1 / -1;
+        grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+        padding-bottom: 6rem;
     }
 
     @media only screen and (max-width: $bp-s) {

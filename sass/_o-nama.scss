@@ -3,11 +3,11 @@
     color: $color-primary;
     text-align: center;
     margin-top: 4rem;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 
     @media only screen and (max-width: $bp-m) {
-        margin-top: 12rem;
-        margin-bottom: 12rem;
+        margin-top: 8rem;
+        margin-bottom: 0rem;
     }
         
     &__img {

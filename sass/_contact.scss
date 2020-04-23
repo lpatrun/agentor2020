@@ -1,0 +1,105 @@
+.cta {
+    grid-column: full-start / full-end;
+    background-color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 0 0 15rem 0;
+
+    @media only screen and (max-width: $bp-m) {
+        grid-template-columns: 1fr;
+        margin: 0 0 8rem 0;
+    }
+
+    &__location {
+        grid-column: 1 / 2;
+        width: 100%;
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;
+        }
+    }
+    
+    &__slogan {
+        grid-column: 2 / 3;
+        padding: 6rem 3rem;
+        background-color: rgba($color-secondary, .93);
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+    }
+}
+
+.form {
+    grid-column: center-start / center-end;
+    margin: 0 0 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+
+    @media only screen and (max-width: $bp-m) {
+        margin: 0 0 8rem 0;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color:$color-grey-light-1;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 100%;
+        display: block;
+        transition: all .3s;
+
+
+        &:focus {
+            outline-color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba(#000, .1);
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__name { grid-column: 1 / -1; }
+
+    &__mail { 
+        grid-column: 1 / 2; 
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__phone { 
+        grid-column: 2 / 3;
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__message { grid-column: 1 / -1;}
+
+    &__send { 
+        grid-column:  1 / -1;
+        justify-self: center;
+    }
+}

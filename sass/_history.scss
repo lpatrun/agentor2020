@@ -1,21 +1,42 @@
 .history {
-    grid-column: center-start / center-end;
-    margin: 15rem 0;
+    grid-column: full-start / full-end;
+    margin: 5rem 0 15rem 0;
     text-align: center;
+    
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
     @media only screen and (max-width: $bp-m) {
         grid-column: 1 / -1;
-        margin: 8rem 0;
+        margin: 4rem 0 10rem 0;
+    }
+
+    &__title {
+        grid-column: 1 / -1;
+        margin-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-m) {
+            margin-bottom: 3rem;  
+        }
+    }
+
+    &__story {
+        grid-column: 1 / 2;
+        padding: 3rem 5rem;
+
+        @media only screen and (max-width: $bp-m) {
+            grid-column: 1 / -1;  
+        }
     }
 
     &__img{
         width: 100%;
-        margin-top: 8rem;
+        grid-column: 2 / -1;
+        padding: 2rem;
 
         @media only screen and (max-width: $bp-m) {
-            width: 85%;
-            margin: 0 auto; 
-            margin-top: 4rem;
+            grid-column: 1 / -1;
         }
     }
 }
