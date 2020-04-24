@@ -7,7 +7,7 @@
         <script src="js/index.js" defer></script>
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
         
         <title>AGENTOR | lokacija vaše nove nekretnine</title>
     </head>
@@ -18,57 +18,54 @@
 
             <nav class="sidebar__nav">
                 <ul class="sidebar__list">
-                    <li class="sidebar__item"><a href="index.html" class="sidebar__link">POČETNA</a></li>
-                    <li class="sidebar__item"><a href="nekretnine.html" class="sidebar__link  hide-navi">NEKRETNINE</a></li>
-                    <li class="sidebar__item"><a href="o-nama.html" class="sidebar__link">O NAMA</a></li>
-                    <li class="sidebar__item"><a href="contact.html" class="sidebar__link">KONTAKT</a></li>
+                    <li class="sidebar__item"><a href="/" class="sidebar__link">POČETNA</a></li>
+                    <li class="sidebar__item"><a href="/#homes" class="sidebar__link  hide-navi">NEKRETNINE</a></li>
+                    <li class="sidebar__item"><a href="/o-nama" class="sidebar__link">O NAMA</a></li>
+                    <li class="sidebar__item"><a href="/kontakt" class="sidebar__link">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
 
         
         <div class="single">
-            <a href="index.html" class="single__back">NATRAG</a>
-            <img src="img/kuca-1.jpg" alt="Kuća u Istri" class="single__img">
-            <h5 class="heading-4 heading-4--light single__name">Prekrasna villa</h5>
+            <a href="/#homes" class="single__back">NATRAG</a>
+            <img src="{%IMAGE%}" alt="{%NAME%}" class="single__img">
+            <h5 class="heading-4 heading-4--light single__name">{%NAME%}</h5>
             <div class="single__location">
                 <svg>
-                    <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+                    <use xlink:href="sprite.svg#icon-map-pin"></use>
                 </svg>
-                <p>Istra</p>
+                <p>{%LOCATION%}</p>
             </div>
             <div class="single__rooms">
                 <svg>
-                    <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+                    <use xlink:href="sprite.svg#icon-profile-male"></use>
                 </svg>
-                <p>4 sobe</p>
+                <p>{%ROOMS%}</p>
             </div>
             <div class="single__area">
                 <svg>
-                    <use xlink:href="img/sprite.svg#icon-expand"></use>
+                    <use xlink:href="sprite.svg#icon-expand"></use>
                 </svg>
-                <p>325 m<sup>2</sup></p>
+                <p>{%SIZE%} m<sup>2</sup></p>
             </div>
             <div class="single__price">
                 <svg>
-                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                    <use xlink:href="sprite.svg#icon-key"></use>
                 </svg>
-                <p>320 000€</p>
+                <p>{%PRICE%}€</p>
             </div>
-            <div class="single__description">Prodaje se novoizgrađena vila na ekskluzivnoj lokaciji uz more u Kožinu, okolica Zadra.
-                 Udaljena samo 30 metara od mora, površine ca 400 m2, sastoji se od prizemlja, prvog kata, međukata i polunatkrivene terase 
-                 na drugom katu. Kamen i drvo su odlično upotpunjeni staklenim stijenama i ogradama i pružaju luksuz kojeg možete dobiti u
-                  ovoj vili smještenoj na prekrasnoj dalmatinskoj obali.
+            <div class="single__description">{%DESCRIPTION%}
             </div>
         </div>
 
 
         <footer class="footer">
             <ul class="nav">
-                <li class="nav__item"><a href="index.html" class="nav__link">POČETNA</a></li>
-                <li class="nav__item"><a href="nekretnine.html" class="nav__link">NEKRETNINE</a></li>
-                <li class="nav__item"><a href="o-nama.html" class="nav__link">O NAMA</a></li>
-                <li class="nav__item"><a href="contact.html" class="nav__link">KONTAKT</a></li>
+                <li class="nav__item"><a href="/" class="nav__link">POČETNA</a></li>
+                <li class="nav__item"><a href="/#homes" class="nav__link">NEKRETNINE</a></li>
+                <li class="nav__item"><a href="/o-nama" class="nav__link">O NAMA</a></li>
+                <li class="nav__item"><a href="/kontakt" class="nav__link">KONTAKT</a></li>
             </ul>
             <p class="copyright">&copy; From LP to the world</p>
         </footer>

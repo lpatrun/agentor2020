@@ -1,29 +1,29 @@
 <div class="home">
-    <img src="img/kuca-1.jpg" alt="Kuća u Istri" class="home__img">
-    <h5 class="home__name">Prekrasna villa</h5>
+    <img src="{%IMAGE%}" alt="{%NAME%}" class="home__img">
+    <h5 class="home__name">{%NAME%}</h5>
     <div class="home__location">
         <svg>
-            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+            <use xlink:href="sprite.svg#icon-map-pin"></use>
         </svg>
-        <p>Istra</p>
+        <p>{%LOCATION%}</p>
     </div>
     <div class="home__rooms">
         <svg>
-            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+            <use xlink:href="sprite.svg#icon-profile-male"></use>
         </svg>
-        <p>4 sobe</p>
+        <p>{%ROOMS%}</p>
     </div>
     <div class="home__area">
         <svg>
-            <use xlink:href="img/sprite.svg#icon-expand"></use>
+            <use xlink:href="sprite.svg#icon-expand"></use>
         </svg>
-        <p>325 m<sup>2</sup></p>
+        <p>{%SIZE%} m<sup>2</sup></p>
     </div>
     <div class="home__price">
         <svg>
-            <use xlink:href="img/sprite.svg#icon-key"></use>
+            <use xlink:href="sprite.svg#icon-key"></use>
         </svg>
-        <p>320 000€</p>
+        <p>{%PRICE%}€</p>
     </div>
-    <button class="btn home__btn">DETALJNIJE</button>
+    <a href="/home?id={%ID%}" class="btn home__btn">DETALJNIJE</a>
 </div>

@@ -6,8 +6,7 @@ lista.addEventListener('click', e => {
     $('#navi-toggle').prop('checked', false);     
 });
    
-
-let data = [ 
+/* let data = [ 
 { "id":"0","image": "img/kuca-1.jpg", "name":  "Prekrasna villa", "location": "Istra", "rooms": "4 sobe", "size": "325", "price": "320 000", 
 "description" : "Trosobni stan u prizemlju, koji se sastoji od: ulaznog prostora, predsoblja, dnevnog boravka, kuhinje, zaseban wc, kupaonica +wc, dvije spavaće sobe, površine 84.96 m2 sa terasom površine 33 m2, kojem pripada spremište u podrumu zgrade površine 20 m2 i dva garažna mjesta sistema KLAUS površine 14.70 m2 na dvije etaže."},
 { "id":"1","image": "img/kuca-2.jpg", "name": "Ladanjska villa", "location": "Poreč", "rooms": "10 soba", "size": "720", "price": "650 000", 
@@ -79,4 +78,4 @@ renderProducts(data);
 buttonLoadMore.addEventListener('click', e => {
     e.preventDefault();
     renderProducts(data);
-});
+}); */

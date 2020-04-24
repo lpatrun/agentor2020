@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
             let overviewOutput = data;
             fs.readFile(`${__dirname}/template-home.html`, 'utf-8', (err, data) => {
                const homesOutput = homes.map(el => replaceTemplate(data, el)).join('');
-                overviewOutput = overviewOutput.replace('{%CARDS%}', homesOutput);
+                overviewOutput = overviewOutput.replace('{%HOMES%}', homesOutput);
                 res.end(overviewOutput);
             });
         });
@@ -26,24 +26,39 @@ const server = http.createServer((req, res) => {
     else if (pathName == '/home' && id < homes.length) {
         res.writeHead(200, {'Content-type': 'text/html'});
         
-        fs.readFile(`${__dirname}/single.html`, 'utf-8', (err, data) => {
+        fs.readFile(`${__dirname}/single-home.html`, 'utf-8', (err, data) => {
             const home = homes[id];
             const output = replaceTemplate(data, home);
             res.end(output);
         });
     }
 
-    /* else if (pathName == '/test' || pathName == '/') {
+    else if (pathName == '/o-nama' || pathName == '/') {
         res.writeHead(200, {'Content-type': 'text/html'});
-        fs.readFile(`${__dirname}/overview.html`, 'utf-8', (err, data) => {
+        fs.readFile(`${__dirname}/o-nama.html`, 'utf-8', (err, data) => {
             res.end(data);    
         });
-    } */ 
+    }
+
+    else if (pathName == '/kontakt' || pathName == '/') {
+        res.writeHead(200, {'Content-type': 'text/html'});
+        fs.readFile(`${__dirname}/contact.html`, 'utf-8', (err, data) => {
+            res.end(data);    
+        });
+    }
     
     //fotke
     else if ((/\.(jpg|jpeg|png|gif)$/).test(pathName)){
         fs.readFile(`${__dirname}/img${pathName}`, (ee, data) => {
             res.writeHead(200, {'Content-type': 'image/jpg'});
+            res.end(data);
+        });
+    }
+
+    //svg
+    else if ((/\.(svg)/).test(pathName)){
+        fs.readFile(`${__dirname}/img${pathName}`, (ee, data) => {
+            res.writeHead(200, {'Content-type': 'image/svg+xml'});
             res.end(data);
         });
     }
@@ -56,9 +71,9 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    //js
+    
     else if ((/\.(js)$/).test(pathName)){
-        fs.readFile(`${__dirname}/index.js`, (ee, data) => {
+        fs.readFile(`${__dirname}/js/index.js`, (ee, data) => {
             res.writeHead(200, {'Content-type': 'text/javascript'});
             res.end(data);
         });
@@ -74,16 +89,15 @@ server.listen(1337, '127.0.0.1', () => {
     
 });
 
-function replaceTemplate (originalHTML, laptop) {
-    let output = originalHTML.replace(/{%PRODUCTNAME%}/g, laptop.productName);
-    output = output.replace(/{%IMAGE%}/g, laptop.image);
-    output = output.replace(/{%PRICE%}/g, laptop.price);
-    output = output.replace(/{%SCREEN%}/g, laptop.screen);
-    output = output.replace(/{%CPU%}/g, laptop.cpu);
-    output = output.replace(/{%STORAGE%}/g, laptop.storage);
-    output = output.replace(/{%RAM%}/g, laptop.ram);
-    output = output.replace(/{%DESCRIPTION%}/g, laptop.description);
-    output = output.replace(/{%ID%}/g, laptop.id);
+function replaceTemplate (originalHTML, home) {
+    let output = originalHTML.replace(/{%NAME%}/g, home.name);
+    output = output.replace(/{%IMAGE%}/g, home.image);
+    output = output.replace(/{%LOCATION%}/g, home.location);
+    output = output.replace(/{%ROOMS%}/g, home.rooms);
+    output = output.replace(/{%SIZE%}/g, home.size);
+    output = output.replace(/{%PRICE%}/g, home.price);
+    output = output.replace(/{%DESCRIPTION%}/g, home.description);
+    output = output.replace(/{%ID%}/g, home.id);
 
     return output;
 }

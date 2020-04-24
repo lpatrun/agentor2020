@@ -41,7 +41,7 @@
 
     &__people {
         grid-column: full-start / col-end 4;
-        background-image: linear-gradient(rgba($color-secondary, .9), rgba($color-secondary, .9)),url(../img/team.jpg);
+        background-image: linear-gradient(rgba($color-secondary, .9), rgba($color-secondary, .9)),url(../team.jpg);
         background-size: cover;
 
         display: flex;
@@ -56,7 +56,7 @@
 
     &__place{
         grid-column: col-end 4 / full-end;
-        background-image: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9)),url(../img/ured.jpg);
+        background-image: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9)),url(../ured.jpg);
         background-size: cover;
 
         display: flex;

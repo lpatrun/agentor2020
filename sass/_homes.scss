@@ -77,5 +77,8 @@
 
     &__btn {
         grid-column: 1 / -1;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 400;
     }
 }
