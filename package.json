@@ -11,7 +11,7 @@
 
     "site": "start http://127.0.0.1:1337",
     "nodemon": "nodemon",
-    "test": "npm-run-all site nodemon watch:sass",
+    "site:demo": "npm-run-all site nodemon",
 
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 2 version\" css/style.comp.css -o css/style.prefix.css",
