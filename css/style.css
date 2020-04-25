@@ -839,10 +839,16 @@ body {
   background-color: #f9f7f6;
   grid-template-rows: 8rem 6rem 6rem min-content;
   position: relative; }
+  @media only screen and (max-width: 50em) {
+    .single {
+      grid-template-columns: repeat(2, 1fr); } }
   .single__img {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     width: 100%; }
+    @media only screen and (max-width: 50em) {
+      .single__img {
+        grid-column: 1 / -1; } }
   .single__back {
     position: absolute;
     top: 0;
@@ -864,19 +870,27 @@ body {
     align-items: center;
     padding: 2rem 0;
     background-color: #101d2c; }
-  .single__location {
+    @media only screen and (max-width: 50em) {
+      .single__name {
+        grid-column: 1 / -1; } }
+  .single__location, .single__area {
     grid-column: 2 / 3; }
-  .single__rooms {
+    @media only screen and (max-width: 50em) {
+      .single__location, .single__area {
+        grid-column: 1 / 2; } }
+  .single__rooms, .single__price {
     grid-column: 3 / 4; }
-  .single__area {
-    grid-column: 2 / 3; }
-  .single__price {
-    grid-column: 3 / 4; }
+    @media only screen and (max-width: 50em) {
+      .single__rooms, .single__price {
+        grid-column: 2 / 3; } }
   .single__description {
     grid-column: 2 / -1;
     margin-top: 1rem;
     padding: 2rem;
     font-size: 1.5rem; }
+    @media only screen and (max-width: 50em) {
+      .single__description {
+        grid-column: 1 / -1; } }
   .single__location, .single__rooms, .single__area, .single__price {
     font-size: 1.5rem;
     display: flex;
